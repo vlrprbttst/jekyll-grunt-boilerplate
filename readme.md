@@ -2,30 +2,15 @@
 
 Read all about this on [this blog post](http://valeriopierbattista.com/blog/jekyll-and-grunt-boilerplate/ "Jekyll and Grunt Boilerplate").
 
-Clone the repository and create a _node_modules_ folder in the root of the project and install the node modules needed to make this work:
+Clone the repository and create a _node_modules_ folder in the root of the project. Open the terminal and type:
 
-`npm install grunt-browser-sync --save-dev` 
+`npm install` 
 
-`npm install grunt-autoprefixer --save-dev` 
+this will take care of all the dependencies.
 
-`npm install grunt-contrib-concat --save-dev` 
+#Gems
 
-`npm install grunt-contrib-htmlmin --save-dev`
- 
-`npm install grunt-contrib-imagemin --save-dev`
- 
-`npm install grunt-contrib-sass --save-dev` 
-
-`npm install grunt-contrib-uglify --save-dev` 
-
-`npm install grunt-contrib-watch --save-dev` 
-
-`npm install grunt-delete-sync --save-dev` 
-
-`npm install grunt-newer --save-dev` 
-
-
-Gems needed:
+The gems used in this project are Sass, Compass, Jekyll and Wdm. If you don't have already installed them, type each of these commands in the terminal (anywhere):
 
 `gem install sass` 
 
@@ -36,4 +21,4 @@ Gems needed:
 `gem install jekyll`  
 
 
-When you're done, open to cmds in the root of this project's folder and type `jekyll serve` on one and on the another type `grunt`
+When you're done, open two terminals in the root of this project's folder and type `jekyll serve` on one and on the other type `grunt`
