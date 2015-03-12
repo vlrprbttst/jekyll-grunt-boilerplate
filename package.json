@@ -14,7 +14,6 @@
     "grunt-contrib-uglify": "^0.8.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-delete-sync": "0.0.2",
-    "grunt-newer": "^1.1.0",
-    "grunt-shell": "^1.1.1"
+    "grunt-newer": "^1.1.0"
   }
 }
