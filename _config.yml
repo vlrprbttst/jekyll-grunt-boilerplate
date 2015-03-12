@@ -1,0 +1,17 @@
+name: "my first jekyll"
+description: "first attempt"
+source:      ./
+destination: ./_site
+exclude: [.sass-cache,node_modules,sass,package.json,gruntfile.js,images/src,readme.txt,js/libs,js/custom,js/build/production.js]
+encoding: utf-8
+paginate: 2
+paginate_path: "blog/:num"
+permalink: blog/:month-:day-:year/:title.html
+excerpt_separator: <!--more-->
+
+defaults:
+  -
+    scope:
+      path: "blog"
+    values:
+      layout: "posts"
