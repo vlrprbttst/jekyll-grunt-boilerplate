@@ -2,7 +2,7 @@
 
 Read all about this on [this blog post](http://valeriopierbattista.com/blog/jekyll-and-grunt-boilerplate/ "Jekyll and Grunt Boilerplate").
 
-Clone the repository and create a _node_modules_ folder in the root of the project. Open the terminal and type:
+Clone the repository , open the terminal and type:
 
 `npm install` 
 
