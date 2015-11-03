@@ -8,6 +8,7 @@ paginate: 2
 paginate_path: "blog/:num"
 permalink: blog/:month-:day-:year/:title.html
 excerpt_separator: <!--more-->
+gems: [jekyll-paginate]
 
 defaults:
   -

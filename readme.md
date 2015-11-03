@@ -20,5 +20,7 @@ The gems used in this project are Sass, Compass, Jekyll and Wdm. If you don't ha
 
 `gem install jekyll`  
 
+`gem install jekyll-paginate` 
+
 
 When you're done, open two terminals in the root of this project's folder and type `jekyll serve` on one and on the other type `grunt`
