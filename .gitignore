@@ -19,6 +19,8 @@ $RECYCLE.BIN/
 
 .sass-cache
 node_modules
+.project
+.gitattributes
 
 # =========================
 # Operating System Files

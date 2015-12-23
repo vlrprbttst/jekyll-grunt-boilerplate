@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         watch: {
             content: {
                 files: ['_site/**/*.*'],
-                tasks: ['htmlmin'],
+                tasks: ['newer:htmlmin'],
                 options: {
                     livereload: false,
                     spawn: false
@@ -131,7 +131,7 @@ module.exports = function(grunt) {
         browserSync: {
             dev: {
                 bsFiles: {
-                    src: ['_site/**/*.*']
+                    src: ['**/*.*', '!_site/**/*.*', '!*.css.map']
                 },
                 options: {
                     proxy: "localhost:4000",
