@@ -54,8 +54,8 @@ module.exports = function(grunt) {
 
         delete_sync: {
             dist: {
-                cwd: 'images/dist',
-                src: ['**', '_site/images/dist'],
+                cwd: 'images',
+                src: ['**', '_site/images'],
                 syncWith: 'images/src'
             }
         }, // delete sync
@@ -79,7 +79,7 @@ module.exports = function(grunt) {
                     expand: true, // Enable dynamic expansion
                     cwd: 'images/src', // source images (not compressed)
                     src: ['**/*.{png,jpg,gif,svg}'], // Actual patterns to match
-                    dest: 'images/dist' // Destination of compressed files
+                    dest: 'images' // Destination of compressed files
                 }]
             }
         }, // imagemin
@@ -109,7 +109,7 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 src: 'js/build/production.js',
-                dest: 'js/build/production.min.js'
+                dest: 'js/production.min.js'
             }
         }, // uglify
 
@@ -131,7 +131,7 @@ module.exports = function(grunt) {
         browserSync: {
             dev: {
                 bsFiles: {
-                    src: ['**/*.*', '!_site/**/*.*', '!*.css.map']
+                    src: ['_site/**/*.*']
                 },
                 options: {
                     proxy: "localhost:4000",
