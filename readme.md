@@ -4,7 +4,9 @@ Read all about this on [this blog post](http://valeriopierbattista.com/blog/jeky
 
 Clone the repository , open the terminal and type:
 
-`npm install` 
+`npm install` and then
+
+`npm install grunt-postcss autoprefixer cssnano` 
 
 this will take care of all the dependencies.
 

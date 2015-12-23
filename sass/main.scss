@@ -1,127 +1,124 @@
 @import "partials/_mixin.scss";
 @import "partials/_variables.scss";
-
 body {
-  @include reset;
-  font-family: 'open sans';
-  background:url("http://subtlepatterns.com/patterns/concrete_seamless.png");
-  font-size:16px;
-  
+    @include reset;
+    font-family: 'open sans';
+    background: url("http://subtlepatterns.com/patterns/concrete_seamless.png");
+    font-size: 16px;
 }
 
 .container {
-  overflow: auto;
-  max-width:800px;
-  margin:40px auto;
-  padding:20px;
-  background:$background;
-  box-shadow:0 0 10px rgba(0,0,0,.2);
-  border-radius:3px;
-
+    overflow: auto;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: $background;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 3px;
 }
 
 nav {
-  background: lighten(#eee,5%);
-  width: 100%;
-  
-  ul {
-  margin: 0;
-  padding: 0;
-  overflow: auto;
-  
-  li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  float: left;
-  width: 33.3333333%;
-  text-align: center;
-  padding: 20px 0;
-  
-  a,a:visited {color:black}
-  
-  &:hover {
-background:#999;
- 
-  a {
-  color:white;
- }
-}
-}
-}
+    background: lighten(#eee, 5%);
+    width: 100%;
+    ul {
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            float: left;
+            width: 33.3333333%;
+            text-align: center;
+            padding: 20px 0;
+            a,
+            a:visited {
+                color: black
+            }
+            &:hover {
+                background: #999;
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
 }
 
 .left {
-  width: 70%;
-  float: left;
-  box-sizing: border-box;
-  padding: 20px;
-  border-right: 1px solid rgba(0,0,0,.1)
+    width: 70%;
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+    border-right: 1px solid rgba(0, 0, 0, .1)
 }
+
 .right {
-  width: 30%;
-  float: left;
-  padding: 20px;
-  box-sizing: border-box;
+    width: 30%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-a,a:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  color:lighten(blue,15%);
+a,
+a:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: lighten(blue, 15%);
 }
 
-.date {color:#999}
+.date {
+    color: #999
+}
 
 h2 {
-  a,a:visited{
-    color:black;
-    text-decoration: none;
-  }
+    a,
+    a:visited {
+        color: black;
+        text-decoration: none;
+    }
 }
 
 footer {
-  background: #eee;
-  padding: 20px 0;
-  text-align: center;
-  font-weight: bold;
-  clear:left
+    background: #eee;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: bold;
+    clear: left
 }
 
 .pagination ul {
-  overflow: auto;
-  margin:40px 0 0 ;
-  padding:20px;
-  border:1px dashed grey;
+    overflow: auto;
+    margin: 40px 0 0;
+    padding: 20px;
+    border: 1px dashed grey;
 }
+
 .pagination li {
-  float: left;
-  list-style: none;
-  margin: 0 10px;
-  text-decoration: capitalize;
-  padding:0;
-  
-  &:first-child {
-    margin:0 10px 0 0;
-  }
+    float: left;
+    list-style: none;
+    margin: 0 10px;
+    text-decoration: capitalize;
+    padding: 0;
+    &:first-child {
+        margin: 0 10px 0 0;
+    }
 }
 
 .pagination li a {
-  text-transform: capitalize;
-  
+    text-transform: capitalize;
 }
 
 h1 {
-  background:red;
-  color:white;
-  display: inline-block;
-  padding:10px 20px;
-  margin:0 0 10px;
-  text-transform: capitalize;
+    background: red;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 0 10px;
+    text-transform: capitalize;
 }
 
 h2 {
-  color: #999
+    color: #999
 }
-
-
