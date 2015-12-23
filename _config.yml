@@ -2,7 +2,7 @@ name: "my first jekyll"
 description: "first attempt"
 source:      ./
 destination: ./_site
-exclude: [.sass-cache,node_modules,sass,package.json,gruntfile.js,images/src,readme.txt,js/libs,js/custom,js/build,readme.md]
+exclude: [.sass-cache,node_modules,sass,package.json,gruntfile.js,images-src,readme.txt,js/libs,js/custom,js/build,readme.md]
 encoding: utf-8
 paginate: 2
 paginate_path: "blog/:num"

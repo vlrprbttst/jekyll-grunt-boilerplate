@@ -20,11 +20,11 @@ module.exports = function(grunt) {
                 }
             },
             deleting: {
-                files: ['images/src/**/*.{png,jpg,gif,svg}'],
+                files: ['images-src/**/*.{png,jpg,gif,svg}'],
                 tasks: ['delete_sync']
             }, // end of delete sync
             images: {
-                files: ['images/src/**/*.{png,jpg,gif,svg}'],
+                files: ['images-src/**/*.{png,jpg,gif,svg}'],
                 tasks: ['newer:imagemin']
             }, // watch images added to src
             css: {
@@ -55,8 +55,8 @@ module.exports = function(grunt) {
         delete_sync: {
             dist: {
                 cwd: 'images',
-                src: ['**', '_site/images'],
-                syncWith: 'images/src'
+                src: ['**', 'images'],
+                syncWith: 'images-src'
             }
         }, // delete sync
 
@@ -77,9 +77,9 @@ module.exports = function(grunt) {
             dynamic: {
                 files: [{
                     expand: true, // Enable dynamic expansion
-                    cwd: 'images/src', // source images (not compressed)
+                    cwd: 'images-src/', // source images (not compressed)
                     src: ['**/*.{png,jpg,gif,svg}'], // Actual patterns to match
-                    dest: 'images' // Destination of compressed files
+                    dest: 'images/' // Destination of compressed files
                 }]
             }
         }, // imagemin
@@ -142,11 +142,11 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-newer');
-    grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-delete-sync');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
