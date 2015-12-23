@@ -19,12 +19,8 @@ module.exports = function(grunt) {
                     spawn: false
                 }
             },
-            deleting: {
-                files: ['images-src/**/*.{png,jpg,gif}'],
-                tasks: ['delete_sync']
-            }, // end of delete sync
             images: {
-                files: ['images-src/**/*.{png,jpg,gif}'],
+                files: ['images-src'],
                 tasks: ['newer:imagemin']
             }, // watch images added to src
             css: {
@@ -52,14 +48,6 @@ module.exports = function(grunt) {
          *
          */
 
-        delete_sync: {
-            dist: {
-                cwd: 'images',
-                src: ['**', 'images'],
-                syncWith: 'images-src'
-            }
-        }, // delete sync
-
         sass: {
             dist: {
                 options: {
@@ -77,9 +65,9 @@ module.exports = function(grunt) {
             dynamic: {
                 files: [{
                     expand: true, // Enable dynamic expansion
-                    cwd: 'images-src', // source images (not compressed)
-                    src: ['**/*.{png,jpg,gif}'], // Actual patterns to match
-                    dest: 'images' // Destination of compressed files
+                    cwd: 'images-src/', // Src matches are relative to this path
+                    src: ['**/*.{png,jpg,gif,svg}'], // Actual patterns to match
+                    dest: 'images/' // Destination path prefix
                 }]
             }
         }, // imagemin
@@ -147,7 +135,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-newer');
-    grunt.loadNpmTasks('grunt-delete-sync');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');

@@ -1,4 +1,4 @@
-name: "my first jekyll"
+name: "jekyll"
 description: "first attempt"
 source:      ./
 destination: ./_site
