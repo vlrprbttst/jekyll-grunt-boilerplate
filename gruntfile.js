@@ -20,7 +20,7 @@ module.exports = function(grunt) {
                 }
             },
             images: {
-                files: ['images-src'],
+                files: ['images-src/**/*.*'],
                 tasks: ['newer:imagemin']
             }, // watch images added to src
             css: {
