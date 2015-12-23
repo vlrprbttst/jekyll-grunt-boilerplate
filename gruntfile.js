@@ -20,11 +20,11 @@ module.exports = function(grunt) {
                 }
             },
             deleting: {
-                files: ['images/src/**/*.{png,jpg,gif}'],
+                files: ['images/src/**/*.{png,jpg,gif,svg}'],
                 tasks: ['delete_sync']
             }, // end of delete sync
             images: {
-                files: ['images/src/**/*.{png,jpg,gif}'],
+                files: ['images/src/**/*.{png,jpg,gif,svg}'],
                 tasks: ['newer:imagemin']
             }, // watch images added to src
             css: {
@@ -77,9 +77,9 @@ module.exports = function(grunt) {
             dynamic: {
                 files: [{
                     expand: true, // Enable dynamic expansion
-                    cwd: 'images/src/', // source images (not compressed)
-                    src: ['**/*.{png,jpg,gif}'], // Actual patterns to match
-                    dest: 'images/dist/' // Destination of compressed files
+                    cwd: 'images/src', // source images (not compressed)
+                    src: ['**/*.{png,jpg,gif,svg}'], // Actual patterns to match
+                    dest: 'images/dist' // Destination of compressed files
                 }]
             }
         }, // imagemin
